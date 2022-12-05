@@ -66,7 +66,7 @@ class CircularLinkedList:
     else:
       return False
 
-def getKthNode(start, m):
+def getMthNode(start, m):
     temp = start
     for i in range(1, m+1):
        temp = temp.next
@@ -83,7 +83,7 @@ def josephusProblem(n, m):
     return None
   start = ll.head 
   while not ll.isLastNode():
-    m_node = getKthNode(start, m)
+    m_node = getMthNode(start, m)
     start = m_node.next 
     ll.delete(m_node.value)
   return start.value
